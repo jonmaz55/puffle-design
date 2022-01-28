@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"); /*header*/
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap"); /*tittle1*/
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap"); /*content*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  font-size:1em;
+  background-color: rgb(247, 247, 247);
+}
+
+/*grid*/
+
+.container > * {
+  padding: 20px;
+  border: 0px solid;
+  /*background-color: rgba(126, 121, 121, 0.494);*/
+}
+
+.header {
+  grid-area: header;
+  font-size: 3em;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+}
+.h1-1 {
+  color: azure;
+  text-shadow: 2px 2px 7px rgb(2, 2, 2);
+}
+.header {
+  background-image: url(img/1.jpg);
+  background-size: cover;
+  background-color: #fff;
+  background-position: center center;
+}
+.tittle1 {
+  font-size: 0.5em;
+  background-color: azure;
+  width: 40%;
+  padding: 2px;
+  margin: 0px 30%;
+  color: rgb(0, 0, 0);
+  font-family: "Lobster", cursive;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+.content {
+  grid-area: content;
+  font-family: "Righteous", cursive;
+  text-align: justify;
+  background-color: rgba(126, 121, 121, 0.494);
+}
+.img-2 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.text-1 {
+  padding: 20px;
+}
+.img-22{
+  width: 50%;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: rgba(255, 255, 255, 0);
+}
+iframe {
+  width: 100%;
+}
+.side {
+  grid-area: sidebar;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(126, 121, 121, 0.494);
+}
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  min-height: 100vh;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "header"
+    "navbar"
+    "content"
+    "sidebar"
+    "footer";
+}
+.grid-container--fill {
+  display: grid;
+  /*espacio alos laterales*/
+  gap: 1rem;
+  /*///*/
+  /*altura del cuadro*/
+  grid-auto-rows: 34rem;
+  /*//*/
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+.grid-element {
+  background-color: #666666;
+  padding: 20px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.grid-element img {
+ width: 100%;
+ height: auto;
+}
+.grid-element p {
+text-align: center;
+ }
+.footer img{
+  width: 7%;
+  height: auto;
+}
+.footer p{
+  width: 7%;
+  height: auto;
+}
