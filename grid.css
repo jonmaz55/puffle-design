@@ -1,0 +1,313 @@
+body {
+  background-color: rgb(201, 226, 248);
+}
+.contenedor {
+  width: 95%;
+  max-width: 1000px;
+  /*margen alos laterales*/
+  margin: 0px auto;
+  /*///*/
+  display: grid;
+  /*para dar la separacion entre los div*/
+  grid-gap: 20px;
+  /*////*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+
+  grid-template-areas:
+    "header header header"
+    "contenido contenido sidebar"
+    "widget-1 widget-1 widget-1"
+    "widget-2 widget-2 widget-2"
+    "footer footer footer";
+}
+.contenedor > div,
+.contenedor .contenido,
+.contenedor .header,
+.contenedor .sidebar,
+.contenedor .footer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+}
+/*header-----------------------------*/
+.contenedor .header {
+  background-color: transparent;
+  color: white;
+  grid-area: header;
+  padding: 0px;
+}
+.contenedor-1 {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.contenedor-1 h3 {
+  font-size: 4rem;
+  color: #e9c47e;
+  text-shadow: 2px 2px 1px rgb(7, 7, 7);
+  margin-top: -14rem;
+}
+.centrado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contenedor-1 img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+/*-----------------------------*/
+.contenedor .contenido {
+  grid-area: contenido;
+}
+.contenedor .sidebar {
+  grid-column: 3 / 4;
+  background-color: tomato;
+  text-align: center;
+  min-height: 100px;
+  grid-area: sidebar;
+}
+/*widget-----------------------------*/
+.contenedor .widget-1,
+.contenedor .widget-2 {
+  background-color: rgb(0, 128, 43);
+  text-align: center;
+}
+.contenedor .widget-1 {
+  grid-area: widget-1;
+  
+}
+.contenedor .widget-2 {
+  grid-area: widget-2;
+  background-color: rgb(5, 5, 5);
+}
+/*.widget-2{
+  background-image: url(img/1-2.jpg);
+  background-position: center;
+	background-size: cover;
+}*/
+.grid-container {
+  display: grid;
+}
+
+.grid-container--fill {
+  /*espacio alos laterales*/
+  gap: 1rem;
+  /*///*/
+  /*altura del cuadro*/
+  grid-auto-rows: 22rem;
+  /*//*/
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.grid-container--fit {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.grid-element {
+  background-color: rgba(20, 239, 255, 0.172);
+  padding: 20px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.contenedor-2{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.centrado-2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centrado-2 h3{
+  color: #6e1cad;
+  font-size: 4rem;
+  text-shadow: 4px 3px 2px #dd75da;
+}
+
+.contenedor-2 img{
+  width: 100%;
+  height:auto;
+}
+/*animacion----------------------*/
+.animated-shadow {
+  color: #ffffff;
+  font: normal 140px Varela Round, sans-serif;
+  height: 140px;
+  left: 0;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  animation: move linear 2000ms infinite;
+  z-index: 2
+}
+/*Animación para rotar las sombras*/
+@keyframes move {
+  0% {
+    text-shadow:
+      4px -4px 0 #da0641,
+      3px -3px 0 #da0641,
+      2px -2px 0 #da0641,
+      1px -1px 0 #da0641,
+      -4px 4px 0 #13f1fc,
+      -3px 3px 0 #13f1fc,
+      -2px 2px 0 #13f1fc,
+      -1px 1px 0 #13f1fc
+    ;
+  }
+  25% {
+    text-shadow:
+      -4px -4px 0 #13f1fc,
+      -3px -3px 0 #13f1fc,
+      -2px -2px 0 #13f1fc,
+      -1px -1px 0 #13f1fc,
+      4px 4px 0 #da0641,
+      3px 3px 0 #da0641,
+      2px 2px 0 #da0641,
+      1px 1px 0 #da0641
+    ;
+  }
+  50% {
+    text-shadow:
+      -4px 4px 0 #da0641,
+      -3px 3px 0 #da0641,
+      -2px 2px 0 #da0641,
+      -1px 1px 0 #da0641,
+      4px -4px 0 #13f1fc,
+      3px -3px 0 #13f1fc,
+      2px -2px 0 #13f1fc,
+      1px -1px 0 #13f1fc
+    ;
+  }
+  75% {
+    text-shadow:
+      4px 4px 0 #13f1fc,
+      3px 3px 0 #13f1fc,
+      2px 2px 0 #13f1fc,
+      1px 1px 0 #13f1fc,
+      -4px -4px 0 #da0641,
+      -3px -3px 0 #da0641,
+      -2px -2px 0 #da0641,
+      -1px -1px 0 #da0641
+    ;
+  }
+  100% {
+    text-shadow:
+      4px -4px 0 #da0641,
+      3px -3px 0 #da0641,
+      2px -2px 0 #da0641,
+      1px -1px 0 #da0641,
+      -4px 4px 0 #13f1fc,
+      -3px 3px 0 #13f1fc,
+      -2px 2px 0 #13f1fc,
+      -1px 1px 0 #13f1fc
+    ;
+  }
+}
+/*----------------------------*/
+.marco-rgb{
+  height: auto;
+  transform: translate(0%,0%);
+  border-radius: 5px;
+  box-shadow: 0 20px 35px rgb(0 0 0 / 30%);
+  overflow: hidden;
+}
+.marco-rgb:before{
+  content: "";
+  height: 190%;
+  width: 192%;
+  position: absolute;
+  background: conic-gradient(
+      #fd004c,
+      #fe9000,
+      #fff020,
+      #3edf4b,
+      #3363ff,
+      #b102b7,
+      #fd004c
+  );
+  left: -49%;
+  top: -37%;
+  animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+  100%{
+      transform: rotate(-360deg);
+  }
+}
+.marco-rgb:after{
+  background-image: url(img/catalogo/gamer/1.png);
+  background-position: center center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  background-color: #1c1b29;
+  height: 93%;
+  width: 93%;
+  top: 3.5%;
+  left: 3.5%;
+  border-radius: 5px;
+  font-family: 'Poppins',sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 6px;
+  display: grid;
+  place-items: center;
+
+}
+/*-----------------------------*/
+.contenedor .footer {
+  background-color: black;
+  grid-area: footer;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-areas:
+      "header header header"
+      "sidebar sidebar sidebar"
+      "contenido contenido contenido"
+      "widget-1 widget-1 widget-1  "
+      "widget-2 widget-2 widget-2  "
+      "footer footer footer";
+  }
+  .contenedor-1 h3 {
+    font-size: 2rem;
+    margin-top: -100px;
+  }
+  .grid-container--fill {
+    gap: 1rem;
+    grid-auto-rows: 11rem;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+}
+.centrado-2 h3 {
+  color: #6e1cad;
+  font-size: 2rem;
+  text-shadow: 4px 3px 2px #dd75da;
+  margin-top: 78px;
+}
+.marco-rgb:before {
+  height: 220%;
+  width: 220%;
+  left: -59%;
+  top: -59%;
+}
+}
+@media screen and (max-width: 320px){
+  .marco-rgb:before{
+content: "";
+height: 258%;
+width: 250%;
+left: -65%;
+top: -81%;
+}
+}
