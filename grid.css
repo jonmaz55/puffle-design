@@ -109,7 +109,7 @@ body {
   background-color: #482d24;
 }
 .widget-1 img{
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 .centrado-1{
@@ -122,6 +122,10 @@ body {
   color: #ffffff;
   font-size: 4rem;
   text-shadow: 4px 3px 2px #000000;
+}
+.contenedor-2 .puff{
+  width: 100%;
+  height: auto;
 }
 /*--------------------------------------*/
 .contenedor .widget-2 {
@@ -346,6 +350,10 @@ body {
   left: -59%;
   top: -59%;
 }
+.widget-1 img{
+  width: 53%;
+  height: auto;
+}
 }
 @media screen and (max-width: 320px){
   .marco-rgb:before{
@@ -354,5 +362,8 @@ height: 258%;
 width: 250%;
 left: -65%;
 top: -81%;
+}
+.sidebar iframe{
+  width:100%;
 }
 }
